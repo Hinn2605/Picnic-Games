@@ -1,0 +1,211 @@
+/* Google Font Poppins Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap');
+
+
+*{
+    margin: 0;
+}
+
+.boder{
+    background-color: antiquewhite;
+    border-radius: 8px;
+}
+
+.boder:hover{
+    background-color: beige;
+}
+
+.body{
+    width: 100%;
+    height: 90vh;
+    background: rgb(241, 241, 240);
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    background: url('/img/picnic1.jpg')no-repeat center/cover;
+    display: flex;
+    transition: all 2s ease-in-out;
+    overflow: hidden;
+}
+
+header .left{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+header .left nav{
+    position: relative;
+    width: 90%;
+    height: 10%;
+    /* border: 1px solid #fff; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+header .left nav h2{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+}
+
+header .left nav ul{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header .left nav ul li{
+    list-style-type: none;
+    padding: 20px 35px;
+}
+
+header .left nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+}
+
+header .left nav ul li a:hover{
+    color: gray;
+}
+
+/* section start */
+
+header .left section{
+    width: 100%;
+    height: 70%;
+    padding-left: 20%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+header .left section .content h1{
+    font-size: 80px;
+}
+
+
+
+.main{
+    width: 90%;
+    height: 90%;
+    border: 6px solid #fff;
+    box-shadow: 0px 20px 40px #000;
+    display: flex;
+}
+
+/* Product Card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  
+
+/* center class */
+.center{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.center ul{
+    
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.center ul li{
+    list-style-type: none;
+    padding: 10px 20px;
+    
+}
+
+.center ul li {
+    color: #fff;
+    font-size: 13px;
+    
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* Product */
+
+
+ /* img */
+ .about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:4rem;
+ }
+ 
+ .about .image{
+    flex:1 1 40rem;
+ }
+ 
+ .about .image img{
+    width: 100%;
+ }
+ 
+ .about .content{
+    flex:1 1 40rem;
+ }
+ 
+ .about .content h3{
+    font-size: 4.5rem;
+    color:var(--black);
+    font-family: 'Merienda One', cursive;
+    padding-bottom: 1rem;
+ }
+ 
+ .about .content p{
+    padding:1rem 0;
+    line-height: 2;
+    color:var(--light-color);
+    font-size: 1.5rem;
+ }
