@@ -97,7 +97,21 @@ header .left section .content h1{
     font-size: 80px;
 }
 
+.has-submenu{
+   position: relative;
+}
 
+.has-submenu:hover .submenu{
+   display: block;
+
+}
+
+
+.submenu{
+   padding: 0;
+   display: none;
+   position: absolute;
+}
 
 
 
