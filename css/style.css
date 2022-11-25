@@ -47,7 +47,7 @@ header .left nav{
     margin: auto;
     display: flex;
     justify-content: space-between;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 header .left nav h2{
@@ -70,7 +70,6 @@ header .left nav ul li{
     list-style-type: none;
     padding: 20px 35px;
 }
-
 header .left nav ul li a{
     color: #fff;
     text-decoration: none;
@@ -91,6 +90,11 @@ header .left section{
     display: flex;
     align-items: center;
     color: #fff;
+}
+
+.left nav h2 a{
+   color: #fff;
+   text-decoration: none;
 }
 
 header .left section .content h1{
