@@ -271,4 +271,18 @@ header .left section .content h1{
     
     /* padding-bottom: 7rem; */
  }
+ button{         
+   height:50px;
+   width:100px;
+   margin-left:400px;
+   background-color: rgb(94, 207, 130);
+   border-radius: 8px;
+   background-color: rgb(132, 223, 89);
+}
+.btn{
+   color: black;
+
+ }
+
+
  
