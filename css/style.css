@@ -272,16 +272,20 @@ header .left section .content h1{
     /* padding-bottom: 7rem; */
  }
  button{         
-   height:50px;
-   width:100px;
-   margin-left:400px;
-   background-color: rgb(94, 207, 130);
+   height:100px;
+   width:200px;
+   margin-left:350px;
+   background-color: rgb(70, 60, 61);
    border-radius: 8px;
-   background-color: rgb(132, 223, 89);
+   background-color: rgb(65, 52, 52);
 }
 .btn{
-   color: black;
-
+   color: rgb(244, 246, 248);
+   text-decoration: none
+   
+ }
+ html{
+   background-color: antiquewhite;
  }
 
 
