@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/register.css">
     <!-- font-awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     
@@ -38,14 +38,17 @@
                     <div class="row">
                         
                         <form onsubmit="validation()">
-                            <h1>Login</h1>
+                            <h1>Register</h1>
                             <input type="text" placeholder="UserName" class="box">
                             <input type="password" placeholder="Password" class="box">
-                            
+                            <input type="password" placeholder="ConfirmPassword" class="box">
+                            <input type="email" placeholder="Email" class="box">
                             
                             <br>
-                            <small>You don't have account? <a href="register.html" style="color:blue ;">RegisterNow!</a></small><br>
-                            <input type="submit" value="Login" class="btn">
+                            <input type="checkbox">Yes, I agree Terms of Service!
+                            <br>
+                            <small>You have account? <a href="register.html" style="color:blue ;">LoginNow!</a></small><br>
+                            <input type="submit" value="Register" class="btn">
                            
                         </form>
                     </div>
@@ -55,12 +58,7 @@
         </header>
     </div>
 
-    <script>
-        function validation(){
-            alert("Login sussesfully Welcome to Picnic Company!")
-        }
-
-     </script>
+  
 
 
 
@@ -98,4 +96,12 @@
         </div>
      </section>
     
+     <script>
+        function validation(){
+            alert("Register sussesfully Welcome to Picnic Company!")
+        }
+
+     </script>
+
+
 </body>
