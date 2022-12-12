@@ -193,3 +193,8 @@ header .left nav ul li a:hover{
     display: none;
     position: absolute;
  }
+
+ a{
+    text-decoration: none;
+    color: white;
+ }

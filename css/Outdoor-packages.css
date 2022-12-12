@@ -228,7 +228,7 @@ header .left section .content h1 {
 
 /* Footer*/
 .footer .box-container {
-    background-color: rgb(170, 225, 98);
+    background-color:antiquewhite;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     gap: 1.5rem;
@@ -956,7 +956,7 @@ a {
 
 /* Footer*/
 .footer .box-container {
-    background-color: rgb(170, 225, 98);
+    background-color:antiquewhite;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     gap: 1.5rem;
