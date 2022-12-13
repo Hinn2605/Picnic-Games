@@ -17,7 +17,7 @@ eProject documentation at https://github.com/Hinn2605/Picnic-Gams/tree/main/docu
 
 ============================
 
-eProject published at https://hinn2605.github.io/Picnic-Gams/
+eProject published at https://hinn2605.github.io/Picnic-Games/
 
 ============================
 
