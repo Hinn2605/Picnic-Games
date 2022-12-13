@@ -13,11 +13,11 @@ Student1408055       Vũ Anh Tuấn
 Student1408007       Vũ Nguyễn Minh Hương
 ============================
 
-eProject documentation at https://github.com/Hinn2605/Picnic-Gams/tree/main/document
+eProject documentation at https://github.com/Hinn2605/Picnic-Games/tree/main/document
 
 ============================
 
-eProject published at https://hinn2605.github.io/Picnic-Gams/
+eProject published at https://hinn2605.github.io/Picnic-Games/
 
 ============================
 
