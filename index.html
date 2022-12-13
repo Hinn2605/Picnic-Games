@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/Auth.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -84,7 +84,7 @@
                 if (listAccount.length) {
                     const findEmail = listAccount.find(item => item.email === loginEmail.value)
                     if (findEmail && loginPassword.value !== findEmail.password) {
-                        alert("Mật khẩu không đúng")
+                        alert("Incorrect password")
                         ready()
                         return
                     }
@@ -94,12 +94,12 @@
                     }
                     listAccount.push(payload)
                     localStorage.setItem("listAccount", JSON.stringify(listAccount))
-                    alert("Đăng nhập thành công")
+                    alert("Logged in successfully")
                     const route = window.location.pathname.replace("index.html", "Home.html")
                     localStorage.setItem("account", JSON.stringify(payload))
                     window.location.href = route
                 } else {
-                    alert("Email không đúng, vui lòng đăng ký")
+                    alert("Email is incorrect, please register")
                 }
                 ready()
             }

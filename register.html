@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/Auth.css">
-    <title>Document</title>
+    <title>Register</title>
 </head>
 
 <body>
@@ -85,19 +85,19 @@
                 if (listAccount.length) {
                     const findEmail = listAccount.find(item => item.email === loginEmail.value)
                     if (findEmail) {
-                        alert("Email đã tồn tại")
+                        alert("Email already exists")
                         ready()
                         return
                     }
                 }
-                console.log('vào đây');
+                console.log('come in');
                 const payload = {
                     email: loginEmail.value,
                     password: loginPassword.value
                 }
                 listAccount.push(payload)
                 localStorage.setItem("listAccount", JSON.stringify(listAccount))
-                alert("Đăng ký thành công")
+                alert("Sign Up Success")
                 ready()
             }
         })
