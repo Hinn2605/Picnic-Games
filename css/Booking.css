@@ -1,0 +1,68 @@
+.pa-5 {
+    padding: 20px
+}
+
+.pa-5 {
+    padding: 20px
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.border-radius-lg {
+    border-radius: 24px;
+}
+
+.box-shadow-main {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    cursor: pointer;
+}
+
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-relative:hover .card-hover {
+    position: absolute;
+    background-color: #7f8c8d;
+    width: inherit;
+    height: 100%;
+    z-index: 10;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.btn-booking {
+    display: none;
+}
+
+.pos-relative:hover .btn-booking {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -95%);
+    z-index: 20;
+    background-color: #34495e;
+    padding: 0px 16px;
+    border-radius: 4px;
+    color: #ffffff
+}

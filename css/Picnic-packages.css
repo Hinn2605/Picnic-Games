@@ -285,8 +285,12 @@ button {
 
 }
 
-#backgr {
-    background-color: antiquewhite;
+.a1 {
+    text-align: center;
+}
+
+.a2 {
+    text-align: center;
 }
 
 .nav-mobile {
@@ -320,6 +324,32 @@ button {
         width: 360px;
         left: 0;
     }
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.nav-menu {
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-menu:hover {
+    padding: 8px 16px;
+    color: white;
+    transition: 0.3s;
+}
+
+.sub-menu-dropdown {
+    display: block;
+}
+
+.sub-menu-notDropdown {
+    display: none;
 }
 
 @media screen and (max-width: 480px) {

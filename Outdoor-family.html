@@ -6,38 +6,143 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/Kid-indoor.css">
+    <link rel="stylesheet" href="./css/Footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
+    </script>
     <title>Family Outdoor Package</title>
 </head>
+<style>
+    /* 6 */
+    .btn-6 {
+        background: rgb(247, 150, 192);
+        background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+        line-height: 42px;
+        padding: 0;
+        border: none;
+    }
+
+    .btn-6 span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-6:before,
+    .btn-6:after {
+        position: absolute;
+        content: "";
+        height: 0%;
+        width: 1px;
+        box-shadow:
+            -1px -1px 20px 0px rgba(255, 255, 255, 1),
+            -4px -4px 5px 0px rgba(255, 255, 255, 1),
+            7px 7px 20px 0px rgba(0, 0, 0, .4),
+            4px 4px 5px 0px rgba(0, 0, 0, .3);
+    }
+
+    .btn-6:before {
+        right: 0;
+        top: 0;
+        transition: all 500ms ease;
+    }
+
+    .btn-6:after {
+        left: 0;
+        bottom: 0;
+        transition: all 500ms ease;
+    }
+
+    .btn-6:hover {
+        background: transparent;
+        color: #76aef1;
+        box-shadow: none;
+    }
+
+    .btn-6:hover:before {
+        transition: all 500ms ease;
+        height: 100%;
+    }
+
+    .btn-6:hover:after {
+        transition: all 500ms ease;
+        height: 100%;
+    }
+
+    .btn-6 span:before,
+    .btn-6 span:after {
+        position: absolute;
+        content: "";
+        box-shadow:
+            -1px -1px 20px 0px rgba(255, 255, 255, 1),
+            -4px -4px 5px 0px rgba(255, 255, 255, 1),
+            7px 7px 20px 0px rgba(0, 0, 0, .4),
+            4px 4px 5px 0px rgba(0, 0, 0, .3);
+    }
+
+    .btn-6 span:before {
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: .5px;
+        transition: all 500ms ease;
+    }
+
+    .btn-6 span:after {
+        right: 0;
+        bottom: 0;
+        width: 0%;
+        height: .5px;
+        transition: all 500ms ease;
+    }
+
+    .btn-6 span:hover:before {
+        width: 100%;
+    }
+
+    .btn-6 span:hover:after {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 480px) {
+        .carousel-item img {
+            width: 360px;
+        }
+
+        #border {
+            width: 360px;
+        }
+    }
+</style>
 
 <body>
     <header id="header">
         <div class="left">
             <nav>
-                <h2><a href="index.html">The Picnic Company</a></h2>
+                <h2><a href="home.html">The Picnic Company</a></h2>
                 <ul>
-                 <li><a href="index.html">Home</a></li> 
-                 <li class="has-submenu">
-                    <a href="./Picnic-packages.html">Picnic Packages</a>
-                 <ol class="submenu">
-                    <li><a href="./Indoor-package.html">In Door</a></li>
-                    <li><a href="./Outdoor-package.html">Out Door</a></li>
-                 </ol>
-                 </li>
-                 <li><a href="./About-us.html">About Us</a></li>
-                 <li><a href="./Contact-us.html">Contact</a></li>
-                 <li class="boder"><a href="#">Book Now</a></li>
-             </ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="has-submenu">
+                        <a href="/Picnic-packages.html">Picnic Packages</a>
+                        <ol class="submenu">
+                            <li><a href="/Indoor-package.html">In Door</a></li>
+                            <li><a href="/Outdoor-package.html">Out Door</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="/About-us.html">About Us</a></li>
+                    <li><a href="/Contact-us.html">Contact</a></li>
+                    <li class="boder"><a href="/Booking.html">Book Now</a></li>
+                </ul>
             </nav>
     </header>
     </div>
@@ -51,6 +156,12 @@
                     </div>
                     <div class="carousel-item">
                         <img src="./img/img-outdoor-family/pic2.jpg" alt="Chicago">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/img-outdoor-family/pic3.jpg" alt="Chicago">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/img-outdoor-family/pic4.jpg" alt="Chicago">
                     </div>
                     <!-- Left and right controls -->
                     <div style="position: absolute; left: 220px; bottom: -0px;">
@@ -80,43 +191,88 @@
                 <a><b>Starting at $200.00</b>- Four Guests / Two Hours</a><br>
                 <a><b>Starting at $250.00</b> - Six Guests / Two Hours</a><br>
                 <a><b>Starting at $300.00</b> - Eight Guests / Two Hours</a>
+                <div style="display: flex; justify-content: center; margin-top: 24px;">
+                    <a href="/Booking.html">
+                        <button class="custom-btn btn-6" style="border-radius: 16px">
+                            <span style="margin-top: 4px;">Book Now</span>
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- Footer -->
 
-    <section class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <i class="fas fa-envelope"></i>
-                <h3>Our Email</h3>
-                <p>vietnam@gmail.com</p>
-                <p>korean@gmail.com</p>
+    <!-- Footer -->
+    <div>
+        <section style="height:80px;"></section>
+        <!----------- Footer ------------>
+        <footer class="footer-bs">
+            <div class="row">
+                <div class="col-md-3 footer-brand animated fadeInLeft">
+                    <h2>Logo</h2>
+                    <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec
+                        ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim,
+                        porta pellentesque ex mi ut sem.</p>
+                    <p>© 2014 BS3 UI Kit, All rights reserved</p>
+                </div>
+                <div class="col-md-4 footer-nav animated fadeInUp">
+                    <h4>Menu —</h4>
+                    <div class="col-md-6">
+                        <ul class="pages">
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Nature</a></li>
+                            <li><a href="#">Explores</a></li>
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Advice</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-social animated fadeInDown">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>
+                            <div style="display: flex; align-items: center;">
+                                <i class="mdi mdi-facebook"></i>
+                                <a href="#" style="margin-left: 8px">Facebook</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex; align-items: center;">
+                                <i class="mdi mdi-twitter"></i>
+                                <a href="#" style="margin-left: 8px">Twitter</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex; align-items: center;">
+                                <i class="mdi mdi-instagram"></i>
+                                <a href="#" style="margin-left: 8px">Instagram</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-ns animated fadeInRight">
+                    <h4>Newsletter</h4>
+                    <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+                    <p>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                        </div><!-- /input-group -->
+                    </p>
+                </div>
             </div>
-
-            <div class="box">
-                <i class="fas fa-clock"></i>
-                <h3>Opening Hours</h3>
-                <p>07:00am to 09:00pm</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Location</h3>
-                <p>Vietnam</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-phone"></i>
-                <h3>Phone</h3>
-                <p>+113</p>
-                <p>+112</p>
-            </div>
-        </div>
-    </section>
+        </footer>
+    </div>
+    <!-- End Footer -->
 </body>
 
 </html>

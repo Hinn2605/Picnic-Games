@@ -1,107 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/register.css">
-    <!-- font-awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    
+    <link rel="stylesheet" href="./css/Auth.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="body">
-        <header id="header">
-            <div class="left">
-                <nav>
-                    <h2><a href="index.html">The Picnic Company</a></h2>
-                    <ul>
-                     <li><a href="index.html">Home</a></li> 
-                     <li class="has-submenu">
-                        <a href="./Picnic-packages.html">Picnic Packages</a>
-                     <ol class="submenu">
-                        <li><a href="./Indoor-package.html">In Door</a></li>
-                        <li><a href="./Outdoor-package.html">Out Door</a></li>
-                     </ol>
-                     </li>
-                     <li><a href="./About-us.html">About Us</a></li>
-                     <li><a href="./Contact-us.html">Contact</a></li>
-                     <li><a href="form.html">Login</a></li>
-                     <li class="boder"><a href="#">Book Now</a></li>
-                 </ul>
-                </nav>
-                <section class="contact">
-                    
-                    
-                  <!-- Form -->
-                    <div class="row">
-                        
-                        <form onsubmit="validation()">
-                            <h1>Register</h1>
-                            <input type="text" placeholder="UserName" class="box">
-                            <input type="password" placeholder="Password" class="box">
-                            <input type="password" placeholder="ConfirmPassword" class="box">
-                            <input type="email" placeholder="Email" class="box">
-                            
-                            <br>
-                            <input type="checkbox">Yes, I agree Terms of Service!
-                            <br>
-                            <small>You have account? <a href="register.html" style="color:blue ;">LoginNow!</a></small><br>
-                            <input type="submit" value="Register" class="btn">
-                           
-                        </form>
+    <div>
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+                    <div class="splash" id="splash">
+                        <img class="splash-logo" src="https://krisantuswanandi.github.io/alpha/003/logo-light.svg"
+                            alt="Alpha Logo">
                     </div>
-                </section>
+                    <div class="login">
+                        <div class="login-header">
+                            <div>
+                                <img class="login-logo" src="https://krisantuswanandi.github.io/alpha/003/logo-dark.svg"
+                                    alt="Alpha Logo">
+                            </div>
+                            <div class="login-title">Welcome Back,</div>
+                            <div class="login-subtitle">Sign up to continue</div>
+                        </div>
+                        <div class="login-body">
+                            <form class="login-form" id="login-form" method="post">
+                                <div class="form-group">
+                                    <label class="form-label" for="login-email">Email</label>
+                                    <input class="form-control" type="email" id="login-email"
+                                        placeholder="example@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="login-password">Password</label>
+                                    <input class="form-control" type="password" id="login-password"
+                                        placeholder="*******">
+                                </div>
+                                <div class="form-group">
+                                    <button class="login-button">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="login-footer">
+                            Already have an account?&nbsp;&nbsp;<a class="link link-register"
+                                href="/index.html">Signin</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-              
-        </header>
-    </div>
-
-  
-
-
-
-    <!-- Footer -->
-    <section class="footer">
-
-        <div class="box-container">
-     
-           <div class="box">
-              <i class="fas fa-envelope"></i>
-              <h3>Our Email</h3>
-              <p>vietnam@gmail.com</p>
-              <p>korean@gmail.com</p>
-           </div>
-     
-           <div class="box">
-              <i class="fas fa-clock"></i>
-              <h3>Opening Hours</h3>
-              <p>07:00am to 09:00pm</p>
-           </div>
-     
-           <div class="box">
-              <i class="fas fa-map-marker-alt"></i>
-              <h3>Location</h3>
-              <p>Vietnam</p>
-           </div>
-     
-           <div class="box">
-              <i class="fas fa-phone"></i>
-              <h3>Phone</h3>
-              <p>+113</p>
-              <p>+112</p>
-           </div>
-     
         </div>
-     </section>
-    
-     <script>
-        function validation(){
-            alert("Register sussesfully Welcome to Picnic Company!")
+
+    </div>
+    <script>
+        var splash = document.getElementById('splash')
+        var loginForm = document.getElementById('login-form')
+        var loginEmail = document.getElementById('login-email')
+        var loginPassword = document.getElementById('login-password')
+        var loginEmailParent = loginEmail.parentNode
+        var loginPasswordParent = loginPassword.parentNode
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault()
+
+            var success = true
+            loginEmailParent.classList.remove('error')
+            loginPasswordParent.classList.remove('error')
+
+            if (loginEmail.value.trim() === '') {
+                loginEmailParent.classList.add('error')
+                success = false;
+            }
+
+            if (loginPassword.value === '') {
+                loginPasswordParent.classList.add('error')
+                success = false;
+            }
+
+            if (success) {
+                splash.classList.remove('out')
+                const listAccount = JSON.parse(localStorage.getItem("listAccount") || "[]")
+                if (listAccount.length) {
+                    const findEmail = listAccount.find(item => item.email === loginEmail.value)
+                    if (findEmail) {
+                        alert("Email đã tồn tại")
+                        ready()
+                        return
+                    }
+                }
+                console.log('vào đây');
+                const payload = {
+                    email: loginEmail.value,
+                    password: loginPassword.value
+                }
+                listAccount.push(payload)
+                localStorage.setItem("listAccount", JSON.stringify(listAccount))
+                alert("Đăng ký thành công")
+                ready()
+            }
+        })
+
+        function ready() {
+            setTimeout(function () {
+                splash.classList.add('out')
+            }, 1000)
         }
 
-     </script>
-
-
+        ready()
+    </script>
 </body>
+
+</html>

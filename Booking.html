@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/Home.css">
+    <link rel="stylesheet" href="/css/Booking.css">
+    <link rel="stylesheet" href="/css/Footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+        integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Booking</title>
+</head>
+
+<body>
+    <i class="mdi mdi-menu" id="menuIcon" aria-hidden="true"
+        style="font-size: 32px; position: fixed; left: 0; top: 0; z-index: 10;"></i>
+    <div class="body">
+        <div class="nav-mobile">
+            <div class="" id="menuDom">
+                <div style="display: flex; align-items: center; justify-content: space-between">
+                    <p class="mb-0" style="color: #ffffff">
+                        Picnic Game Company
+                    </p>
+                    <i class="mdi mdi-close" id="menuIconClose" aria-hidden="true"
+                        style="font-size: 32px; color: #ffffff" style="position: fixed; left: 0; top: 0;"></i>
+                </div>
+
+                <div class="menu">
+                    <div class="nav-menu">
+                        <a href="/Home.html">
+                            <div>
+                                <p class="mb-0" style="color: #ffffff">
+                                    Home
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="nav-menu">
+                        <div style="display: flex; align-items: center">
+                            <div style="max-width: 100px;">
+                                <a href="/Picnic-packages.html">
+                                    <p class="mb-0" style="color: #ffffff" id="linkPicnic">
+                                        Picnics
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="sub-menu">
+                                <i class="mdi mdi-menu-down" id="dropdown-menu"
+                                    style="font-size: 32px; color: #ffffff"></i>
+                            </div>
+                        </div>
+                        <div class="sub-menu-notDropdown" id="menuMobile">
+                            <div>
+                                <a href="/Indoor-package.html">
+                                    <div>
+                                        <p class="mb-0" style="color: #ffffff">
+                                            Indoor
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div style="margin-top: 12px !important">
+                                <a href="/Outdoor-package.html">
+                                    <div>
+                                        <p class="mb-0" style="color: #ffffff">
+                                            Outdoor
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-menu">
+                        <a href="/About-us.html">
+                            <div>
+                                <p class="mb-0" style="color: #ffffff">
+                                    About Us
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="nav-menu">
+                        <a href="/Contact-us.html">
+                            <div>
+                                <p class="mb-0" style="color: #ffffff">
+                                    Contact
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header id="header">
+            <div class="left">
+                <nav class="navigation-home">
+                    <div style="min-width: 300px">
+                        <h2 style="width: 100%"><a href="/Home.html">The Picnic Company</a></h2>
+                        <div style="display: flex; align-items: center">
+                            <div>
+                                <img src="/img/img-home/avt.jpg"
+                                    alt="" width="45" height="45" style="border-radius: 50%">
+                            </div>
+                            <div style="display: flex; align-items: center">
+                                <p style="margin-left: 8px; margin-bottom: 0px;" id="account"></p> <span
+                                    style="margin: 0px 8px">|</span> <span onclick="logout()">Logout</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="/Home.html">Home</a></li>
+                        <li class="has-submenu">
+                            <a href="/Picnic-packages.html">Picnic Packages</a>
+                            <ol class="submenu">
+                                <li><a href="/Indoor-package.html">In Door</a></li>
+                                <li><a href="/Outdoor-package.html">Out Door</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="/About-us.html">About Us</a></li>
+                        <li><a href="/Contact-us.html">Contact</a></li>
+                        <li class="boder"><a href="/Booking.html">Book Now</a></li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <div class="content">
+                        <h1>THE PICNIC COMPANY</h1>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <h5 id="count1"></h5>
+                <h1><span id="line"></span></h1>
+            </div>
+
+        </header>
+    </div>
+    <div class="v-application">
+        <div style="width: 100%">
+            <div id="content-booking">
+                <div class="pa-12">
+                    <h1>Welcome To Booking Page</h1>
+
+                </div>
+                <h1 class="text-center my-16">
+                    Indoor service
+                </h1>
+                <div class="row px-16">
+                    <div class="col-sm-3 px-6 ">
+                        <div class="border-radius-lg box-shadow-main pos-relative" style="width: 100%; height: 100%">
+                            <div class="card-hover">
+                                <img src="/img/img-indoor-kid/pic1.jpg" alt="" width="100%" height="300px"
+                                    style="position: relative; z-index: 7" class="rounded-lg">
+                                <div class="pa-3" style="min-height: 400px;">
+                                    <div class="mt-1">
+                                        <h3 class="text-center">Kid</h3>
+                                        <p class="mb-0 mt-3">
+                                            <span class="font-weight-bold">
+                                                To bring fun to outdoor picnics for children, our company offers the
+                                                following
+                                                services:
+                                            </span>
+                                            <br>
+                                            Indoor games such as: Show and Tell, Office Pen Pal, Paper Tower,...
+                                            Meals after tiring playtime include: main meal, part milk and part biscuit
+                                            To ensure the safety of children, our company will always have guardians for
+                                            children who are trained professionals.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-center justify-space-between">
+                                        <p class="mb-0 mt-3 font-weight-bold">
+                                            Reviews:
+                                        </p>
+                                        <div class="d-flex align-center">
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star-half-full" style="color: orange"></i>
+                                            <p class="mb-0 caption ml-2">
+                                                (53)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-booking">
+                                        <button type="button" data-toggle="modal" data-target="#myModal"
+                                            style="margin-left: 0px">Booking
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 px-6">
+                        <div class="border-radius-lg box-shadow-main pos-relative" style="width: 100%; height: 100%">
+                            <div class="card-hover">
+                                <img src="/img/img-indoor-kid/pic1.jpg" alt="" width="100%" height="300px"
+                                    class="rounded-lg">
+                                <div class="pa-3" style="min-height: 400px;">
+                                    <div class="mt-1">
+                                        <h3 class="text-center">Male</h3>
+                                        <p class="mb-0 mt-3">
+                                            <span class="font-weight-bold">
+                                                For men, our company emphasizes the strength and elegance of men. We
+                                                bring
+                                                you a service that is hard to refuse as follows:
+                                            </span>
+                                            <br>
+                                            You will be guided by a guide about house keeping activities by a trained
+                                            guide.
+                                            You will be able to participate in housekeeping activities such as table
+                                            tennis,
+                                            billiards,...
+                                            After the house keeping activities, you will enjoy services such as massage,
+                                            sauna, food to restore physical strength by activities.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-center justify-space-between">
+                                        <p class="mb-0 mt-3 font-weight-bold">
+                                            Reviews:
+                                        </p>
+                                        <div class="d-flex align-center">
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star-half-full" style="color: orange"></i>
+                                            <p class="mb-0 caption ml-2">
+                                                (53)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-booking">
+                                        <button type="button" data-toggle="modal" data-target="#myModal"
+                                            style="margin-left: 0px">Booking
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 px-6">
+                        <div class="border-radius-lg box-shadow-main pos-relative" style="width: 100%; height: 100%">
+                            <div class="card-hover">
+                                <img src="/img/img-indoor-kid/pic1.jpg" alt="" width="100%" height="300px"
+                                    class="rounded-lg">
+                                <div class="pa-3" style="min-height: 400px;">
+                                    <div class="mt-1">
+                                        <h3 class="text-center">Female</h3>
+                                        <p class="mb-0 mt-3">
+                                            <span class="font-weight-bold">
+                                                Women who love lightness and beauty know this, so our company offers you
+                                                an
+                                                extremely attractive indoor service that is:
+                                            </span>
+                                            <br>
+                                            You will be able to participate in fun fitness activities such as Yoga,
+                                            Guess
+                                            The Thing, Musical Puzzle Game,...
+                                            We provide a professionally trained guide to house keeping activities
+                                            Come to us, you will get beauty consultation with experts and get a free
+                                            massage.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-center justify-space-between">
+                                        <p class="mb-0 mt-3 font-weight-bold">
+                                            Reviews:
+                                        </p>
+                                        <div class="d-flex align-center">
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star-half-full" style="color: orange"></i>
+                                            <p class="mb-0 caption ml-2">
+                                                (53)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-booking">
+                                        <button type="button" data-toggle="modal" data-target="#myModal"
+                                            style="margin-left: 0px">Booking
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 px-6">
+                        <div class="border-radius-lg box-shadow-main pos-relative" style="width: 100%; height: 100%">
+                            <div class="card-hover">
+                                <img src="/img/img-indoor-kid/pic1.jpg" alt="" width="100%" height="300px"
+                                    class="rounded-lg">
+                                <div class="pa-3" style="min-height: 400px;">
+                                    <div class="mt-1">
+                                        <h3 class="text-center">Family</h3>
+                                        <p class="mb-0 mt-3">
+                                            <span class="font-weight-bold">
+                                                Holidays or weekends are days when the family needs a break together to
+                                                bond
+                                                with family, understanding that, our company brings you an indoor
+                                                service
+                                                for the family, as follows:
+                                            </span>
+                                            <br>
+                                            we will organize fun activities at home like Bingo, Mad Libs,
+                                            Tic-Tac-Toe,...
+                                            everything will be prepared just as you requested. We will also have a
+                                            professionally trained guide for this
+                                            After the activities, we will have a relaxing activity so that the family
+                                            can
+                                            talk together and rest after the activities.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-center justify-space-between">
+                                        <p class="mb-0 mt-3 font-weight-bold">
+                                            Reviews:
+                                        </p>
+                                        <div class="d-flex align-center">
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star-half-full" style="color: orange"></i>
+                                            <p class="mb-0 caption ml-2">
+                                                (53)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-booking">
+                                        <button type="button" data-toggle="modal" data-target="#myModal"
+                                            style="margin-left: 0px">Booking
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-center my-16">
+                    Outdoor service
+                </h1>
+                <div class="row px-16">
+                    <div class="col-sm-3 px-6">
+                        <div class="border-radius-lg box-shadow-main pos-relative" style="width: 100%; height: 100%">
+                            <div class="card-hover">
+                                <img src="/img/img-indoor-kid/pic1.jpg" alt="" width="100%" height="300px"
+                                    class="rounded-lg">
+                                <div class="pa-3" style="min-height: 400px;">
+                                    <div class="mt-1">
+                                        <h3 class="text-center">Kid</h3>
+                                        <p class="mb-0 mt-3">
+                                            <span class="font-weight-bold">
+                                                To bring fun to outdoor picnics for children, our company offers the
+                                                following services:
+                                            </span>
+                                            <br>
+                                            Outdoor games such as: flashcard, Backyard Obstacle Course, Disc Golf
+                                            Games,...
+                                            Meals after tiring playtime include: main meal, part milk and part biscuit
+                                            To ensure the safety of children, our company will always have guardians for
+                                            children who are trained professionals.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-center justify-space-between">
+                                        <p class="mb-0 mt-3 font-weight-bold">
+                                            Reviews:
+                                        </p>
+                                        <div class="d-flex align-center">
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star-half-full" style="color: orange"></i>
+                                            <p class="mb-0 caption ml-2">
+                                                (53)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-booking">
+                                        <button type="button" data-toggle="modal" data-target="#myModal"
+                                            style="margin-left: 0px">Booking
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 px-6">
+                        <div class="border-radius-lg box-shadow-main pos-relative" style="width: 100%; height: 100%">
+                            <div class="card-hover">
+                                <img src="/img/img-indoor-kid/pic1.jpg" alt="" width="100%" height="300px"
+                                    class="rounded-lg">
+                                <div class="pa-3" style="min-height: 400px;">
+                                    <div class="mt-1">
+                                        <h3 class="text-center">Male</h3>
+                                        <p class="mb-0 mt-3">
+                                            <span class="font-weight-bold">
+                                                For men, our company emphasizes the strength and elegance of men. We
+                                                bring
+                                                you a service that is hard to refuse as follows:
+                                            </span>
+                                            <br>
+                                            You will try the feeling of skydiving with a professional coach.
+                                            You will have the opportunity to participate in the following competitions
+                                            to
+                                            take home prizes: bicycle racing, Ping pong, artificial climbing.
+                                            After tiring outdoor activities they will provide full food during the move,
+                                            a
+                                            4-star hotel ticket to rest,...
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-center justify-space-between">
+                                        <p class="mb-0 mt-3 font-weight-bold">
+                                            Reviews:
+                                        </p>
+                                        <div class="d-flex align-center">
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star-half-full" style="color: orange"></i>
+                                            <p class="mb-0 caption ml-2">
+                                                (53)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-booking">
+                                        <button type="button" data-toggle="modal" data-target="#myModal"
+                                            style="margin-left: 0px">Booking
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 px-6">
+                        <div class="border-radius-lg box-shadow-main pos-relative" style="width: 100%; height: 100%">
+                            <div class="card-hover">
+                                <img src="/img/img-indoor-kid/pic1.jpg" alt="" width="100%" height="300px"
+                                    class="rounded-lg">
+                                <div class="pa-3" style="min-height: 400px;">
+                                    <div class="mt-1">
+                                        <h3 class="text-center">Kid</h3>
+                                        <p class="mb-0 mt-3">
+                                            <span class="font-weight-bold">
+                                                Women who love lightness and beauty know this, so our company offers you
+                                                an
+                                                extremely attractive outdoor service that is:
+                                            </span>
+                                            <br>
+                                            Bringing a light competitive game tennis, beach volleyball, DIY Bean Bag
+                                            Toss,...
+                                            Come to us, you will get beauty consultation with experts and get a free
+                                            massage.
+                                            Provide accommodation in a 4-star hotel and picnic food.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-center justify-space-between">
+                                        <p class="mb-0 mt-3 font-weight-bold">
+                                            Reviews:
+                                        </p>
+                                        <div class="d-flex align-center">
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star-half-full" style="color: orange"></i>
+                                            <p class="mb-0 caption ml-2">
+                                                (53)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-booking">
+                                        <button type="button" data-toggle="modal" data-target="#myModal"
+                                            style="margin-left: 0px">Booking
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 px-6">
+                        <div class="border-radius-lg box-shadow-main pos-relative" style="width: 100%; height: 100%">
+                            <div class="card-hover">
+                                <img src="/img/img-indoor-kid/pic1.jpg" alt="" width="100%" height="300px"
+                                    class="rounded-lg">
+                                <div class="pa-3" style="min-height: 400px;">
+                                    <div class="mt-1">
+                                        <h3 class="text-center">Kid</h3>
+                                        <p class="mb-0 mt-3">
+                                            <span class="font-weight-bold">
+                                                Holidays or weekends are days when the family needs a break together to
+                                                bond
+                                                with family, understanding that, our company brings you an outdoor
+                                                service
+                                                for the family, as follows:
+                                            </span>
+                                            <br>
+                                            Providing accommodation at a spacious two-bed 4-star hotel.
+                                            Bring family bonding games such as: Look at the picture guess the word, Hula
+                                            Hoop Contest, Family Tennis Match, Homemade Four Square,...
+                                            After tiring activities, they will provide your family with a family meal
+                                            and an
+                                            outdoor barbecue.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-center justify-space-between">
+                                        <p class="mb-0 mt-3 font-weight-bold">
+                                            Reviews:
+                                        </p>
+                                        <div class="d-flex align-center">
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star" style="color: orange"></i>
+                                            <i class="mdi mdi-star-half-full" style="color: orange"></i>
+                                            <p class="mb-0 caption ml-2">
+                                                (53)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-booking">
+                                        <button type="button" data-toggle="modal" data-target="#myModal"
+                                            style="margin-left: 0px">Booking
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Booking Service</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" onsubmit="return onHandleSubmit()">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2 mt-3" for="email">Email:</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2 mt-3" for="pwd">Phone:</label>
+                                <div class="col-sm-10">
+                                    <input type="phone" class="form-control" id="pwd" placeholder="Enter phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2 mt-3" for="pwd">Address:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="address" placeholder="Enter address">
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-0 mt-2" id="emailText"></p>
+                                <p class="mb-0 mt-2" id="pwdText"></p>
+                                <p class="mb-0 mt-2" id="addressText"></p>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-9 col-sm-3">
+                                    <div class="d-flex justify-end">
+                                        <button type="submit" class="btn btn-info">
+                                            <span style="color: white">
+                                                Submit
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div>
+        <section style="height:80px;"></section>
+        <!----------- Footer ------------>
+        <footer class="footer-bs">
+            <div class="row">
+                <div class="col-md-3 footer-brand animated fadeInLeft">
+                    <h2>Logo</h2>
+                    <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec
+                        ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim,
+                        porta pellentesque ex mi ut sem.</p>
+                    <p>© 2014 BS3 UI Kit, All rights reserved</p>
+                </div>
+                <div class="col-md-4 footer-nav animated fadeInUp">
+                    <h4>Menu —</h4>
+                    <div class="col-md-6">
+                        <ul class="pages">
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Nature</a></li>
+                            <li><a href="#">Explores</a></li>
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Advice</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-social animated fadeInDown">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>
+                            <div style="display: flex; align-items: center;">
+                                <i class="mdi mdi-facebook"></i>
+                                <a href="#" style="margin-left: 8px">Facebook</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex; align-items: center;">
+                                <i class="mdi mdi-twitter"></i>
+                                <a href="#" style="margin-left: 8px">Twitter</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex; align-items: center;">
+                                <i class="mdi mdi-instagram"></i>
+                                <a href="#" style="margin-left: 8px">Instagram</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-ns animated fadeInRight">
+                    <h4>Newsletter</h4>
+                    <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+                    <p>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                        </div><!-- /input-group -->
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- End Footer -->
+    <script src="/jvscript/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function onHandleSubmit() {
+            const email = document.getElementById("email").value;
+            const pwd = document.getElementById("pwd").value;
+            const address = document.getElementById("address").value;
+            alert("Booking Successfully")
+            return false
+        }
+    </script>
+</body>
+
+</html>
