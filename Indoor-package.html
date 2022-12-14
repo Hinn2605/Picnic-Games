@@ -125,8 +125,10 @@
                         <h2 style="width: 100%"><a href="Home.html">The Picnic Company</a></h2>
                         <div style="display: flex; align-items: center">
                             <div>
-                                <img src="img/img-home/avt.jpg"
-                                    alt="" width="45" height="45" style="border-radius: 50%">
+                                <a href="index.html">
+                                    <img src="img/img-home/avt.jpg" alt="" width="45" height="45"
+                                        style="border-radius: 50%">
+                                </a>
                             </div>
                             <div style="display: flex; align-items: center">
                                 <p style="margin-left: 8px; margin-bottom: 0px;" id="account"></p> <span
@@ -439,6 +441,19 @@
                 menuDom.classList.add("isActive")
             }
         }
+
+        const account = JSON.parse(localStorage.getItem("account"))
+        console.log('account :>> ', account);
+        if (account) {
+            document.getElementById("account").innerHTML = account.email
+        }
+
+        function logout() {
+            JSON.stringify(localStorage.setItem("account", null))
+            const route = window.location.pathname.replace("Indoor-package.html", "index.html")
+            window.location.href = route
+        }
+
 
         document.getElementById("menuIcon").addEventListener("click", dropDownMenu);
         document.getElementById("menuIconClose").addEventListener("click", dropDownMenu);

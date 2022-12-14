@@ -14,8 +14,8 @@
 
 .body {
     width: 100%;
-    height: 90vh;
-    background: rgb(241, 241, 240);
+    /* height: 90vh; */
+    /* background: rgb(241, 241, 240); */
     font-family: 'poppins', sans-serif;
     display: flex;
     align-items: center;
@@ -262,4 +262,100 @@ button {
 }
 .d-flex {
     display: flex;
+}
+
+
+.nav-mobile {
+    color: #ffffff
+}
+
+.nav-mobile:not(.isActive) {
+    position: absolute;
+    left: -360px
+}
+
+.isActive {
+    width: 360px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 1.0);
+    z-index: 99;
+    animation: leftToRight 0.2s ease forwards;
+
+}
+
+@keyframes leftToRight {
+    0% {
+        width: 0px
+    }
+
+    100% {
+        width: 360px;
+        left: 0;
+    }
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.nav-menu {
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-menu:hover {
+    padding: 8px 16px;
+    color: white;
+    transition: 0.3s;
+}
+
+.sub-menu-dropdown {
+    display: block;
+}
+
+.sub-menu-notDropdown {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    header .left section .content h1 {
+        font-size: 30px
+    }
+
+    header .left section {
+        padding-left: 8%;
+    }
+
+    .footer .box-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .navigation-home {
+        display: none !important;
+    }
+
+    .nav-mobile {
+        display: block
+    }
+
+    #menuIcon {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    #menuIcon {
+        display: none;
+    }
 }

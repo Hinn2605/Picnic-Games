@@ -147,8 +147,10 @@
                         <h2 style="width: 100%"><a href="Home.html">The Picnic Company</a></h2>
                         <div style="display: flex; align-items: center">
                             <div>
-                                <img src="img/img-home/avt.jpg"
-                                    alt="" width="45" height="45" style="border-radius: 50%">
+                                <a href="index.html">
+                                    <img src="img/img-home/avt.jpg" alt="" width="45" height="45"
+                                        style="border-radius: 50%">
+                                </a>
                             </div>
                             <div style="display: flex; align-items: center">
                                 <p style="margin-left: 8px; margin-bottom: 0px;" id="account"></p> <span
@@ -233,7 +235,8 @@
                                         </div>
                                     </div>
                                     <button type="kidout" class="button-content">
-                                        <a href="Indoor-kid.html" class="btn text-white" style="text-decoration: none"><b>See
+                                        <a href="Indoor-kid.html" class="btn text-white"
+                                            style="text-decoration: none"><b>See
                                                 more</b>
                                         </a>
                                     </button>
@@ -287,7 +290,8 @@
                                         </div>
                                     </div>
                                     <button type="kidout" class="button-content">
-                                        <a href="Indoor-male.html" class="btn text-white" style="text-decoration: none"><b>See
+                                        <a href="Indoor-male.html" class="btn text-white"
+                                            style="text-decoration: none"><b>See
                                                 more</b>
                                         </a>
                                     </button>
@@ -341,7 +345,8 @@
                                         </div>
                                     </div>
                                     <button type="kidout" class="button-content">
-                                        <a href="Indoor-female.html" class="btn text-white" style="text-decoration: none"><b>See
+                                        <a href="Indoor-female.html" class="btn text-white"
+                                            style="text-decoration: none"><b>See
                                                 more</b>
                                         </a>
                                     </button>
@@ -397,7 +402,8 @@
                                         </div>
                                     </div>
                                     <button type="kidout" class="button-content">
-                                        <a href="Indoor-family.html" class="btn text-white" style="text-decoration: none"><b>See
+                                        <a href="Indoor-family.html" class="btn text-white"
+                                            style="text-decoration: none"><b>See
                                                 more</b>
                                         </a>
                                     </button>
@@ -455,7 +461,8 @@
                                         </div>
                                     </div>
                                     <button type="kidout" class="button-content">
-                                        <a href="Outdoor-kid.html" class="btn text-white" style="text-decoration: none"><b>See
+                                        <a href="Outdoor-kid.html" class="btn text-white"
+                                            style="text-decoration: none"><b>See
                                                 more</b>
                                         </a>
                                     </button>
@@ -505,7 +512,8 @@
                                         </div>
                                     </div>
                                     <button type="kidout" class="button-content">
-                                        <a href="Outdoor-male.html" class="btn text-white" style="text-decoration: none"><b>See
+                                        <a href="Outdoor-male.html" class="btn text-white"
+                                            style="text-decoration: none"><b>See
                                                 more</b>
                                         </a>
                                     </button>
@@ -557,7 +565,8 @@
                                         </div>
                                     </div>
                                     <button type="kidout" class="button-content">
-                                        <a href="Outdoor-female.html" class="btn text-white" style="text-decoration: none"><b>See
+                                        <a href="Outdoor-female.html" class="btn text-white"
+                                            style="text-decoration: none"><b>See
                                                 more</b>
                                         </a>
                                     </button>
@@ -608,7 +617,8 @@
                                         </div>
                                     </div>
                                     <button type="kidout" class="button-content">
-                                        <a href="Outdoor-family.html" class="btn text-white" style="text-decoration: none"><b>See
+                                        <a href="Outdoor-family.html" class="btn text-white"
+                                            style="text-decoration: none"><b>See
                                                 more</b>
                                         </a>
                                     </button>
@@ -620,7 +630,7 @@
             </div>
         </div>
     </div>
-<br><br>
+    <br><br>
     <!-- Footer -->
     <div>
         <!----------- Footer ------------>
@@ -716,7 +726,17 @@
                 menuDom.classList.add("sub-menu-notDropdown")
             }
         }
+        const account = JSON.parse(localStorage.getItem("account"))
+        console.log('account :>> ', account);
+        if (account) {
+            document.getElementById("account").innerHTML = account.email
+        }
 
+        function logout() {
+            JSON.stringify(localStorage.setItem("account", null))
+            const route = window.location.pathname.replace("Picnic-packages.html", "index.html")
+            window.location.href = route
+        }
         document.getElementById("menuIcon").addEventListener("click", dropDownMenu);
         document.getElementById("menuIconClose").addEventListener("click", dropDownMenu);
 
