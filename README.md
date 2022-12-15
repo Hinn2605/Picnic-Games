@@ -19,6 +19,8 @@ eProject documentation at https://github.com/Hinn2605/Picnic-Games/tree/main/doc
 
 eProject published at https://hinn2605.github.io/Picnic-Games/
 
+Please register an account to access the web site
+
 ============================
 
 Thank you for spending your time to look at our work.
