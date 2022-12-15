@@ -384,10 +384,17 @@
    <script src="jvscript/header.js"></script>
    <script>
       const account = JSON.parse(localStorage.getItem("account"))
-      console.log('account :>> ', account);
-      if (account) {
-         document.getElementById("account").innerHTML = account.email
-      }
+        console.log('account :>> ', account);
+        if (account) {
+            document.getElementById("account").innerHTML = account.email
+        }
+
+        function logout() {
+            JSON.stringify(localStorage.setItem("account", null))
+            const route = window.location.pathname.replace("About-us.html", "index.html")
+            console.log('route :>> ', route);
+            window.location.href = route
+        }
 
 
       function dropDownMenu() {

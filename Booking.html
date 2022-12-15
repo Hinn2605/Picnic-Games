@@ -686,6 +686,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+        const account = JSON.parse(localStorage.getItem("account"))
+        console.log('account :>> ', account);
+        if (account) {
+            document.getElementById("account").innerHTML = account.email
+        }
+
+        function logout() {
+            JSON.stringify(localStorage.setItem("account", null))
+            const route = window.location.pathname.replace("Booking.html", "index.html")
+            console.log('route :>> ', route);
+            window.location.href = route
+        }
+
         function onHandleSubmit() {
             const email = document.getElementById("email").value;
             const pwd = document.getElementById("pwd").value;
